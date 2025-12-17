@@ -43,25 +43,21 @@ Install dependencies:
 pip install -e .
 
 Install Ollama from:
-
-https://ollama.com
+  - https://ollama.com
 
 Pull a model:
-
-ollama pull llama3.1:8b
+  - ollama pull llama3.1:8b
 
 Verify Ollama is running:
-
-ollama list
+  - ollama list
 
 Running an evaluation:
-
-python scripts/run_eval.py --dataset data/raw/sample_tasks.jsonl --scorer llm_judge
+  - python scripts/run_eval.py --dataset data/raw/sample_tasks.jsonl --scorer llm_judge
 
 Evaluation results are written to:
+  - outputs/runs/
 
-outputs/runs/
-
+---
 
 ## Output overview:
 
@@ -76,6 +72,7 @@ Each evaluation run produces a JSON file containing:
 
 This allows inspection of why an agent failed, not just whether it failed.
 
+---
 
 Design notes:
   - Deterministic checks are used where possible (format compliance)
@@ -83,6 +80,7 @@ Design notes:
   - Local models are used to keep the project cost-free and reproducible
   - The framework is intentionally simple and extensible
 
+---
 
 Limitations:
   - Local LLM judges may be inconsistent
