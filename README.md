@@ -43,22 +43,27 @@ Install dependencies:
 pip install -e .
 
 Install Ollama from:
+
 https://ollama.com
 
 Pull a model:
+
 ollama pull llama3.1:8b
 
 Verify Ollama is running:
+
 ollama list
 
 Running an evaluation:
+
 python scripts/run_eval.py --dataset data/raw/sample_tasks.jsonl --scorer llm_judge
 
 Evaluation results are written to:
+
 outputs/runs/
 
 
-##Output overview:
+## Output overview:
 
 Each evaluation run produces a JSON file containing:
   - Average final score
